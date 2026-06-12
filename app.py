@@ -5,10 +5,11 @@ app = Flask(__name__)
 
 def get_db():
     conn = psycopg2.connect(
-        host="localhost",
-        database="bike_shop",
-        user="macbook",
-        password=""
+        host="postgres.railway.internal",
+        database="railway",
+        user="postgres",
+        port="5432",
+        password="VXoclQyRUyqCCcPAuttIfaeHIuSRLzqV"
     )
     return conn
 
