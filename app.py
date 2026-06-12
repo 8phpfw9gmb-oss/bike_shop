@@ -4,13 +4,7 @@ import psycopg2
 app = Flask(__name__)
 
 def get_db():
-    conn = psycopg2.connect(
-        host="postgres.railway.internal",
-        database="railway",
-        user="postgres",
-        port="5432",
-        password="VXoclQyRUyqCCcPAuttIfaeHIuSRLzqV"
-    )
+    conn = psycopg2.connect("postgresql://postgres:VXoclQyRUyqCCcPAuttIfaeHIuSRLzqV@thomas.proxy.rlwy.net:59333/railway")
     return conn
 
 @app.route('/')
